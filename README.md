@@ -82,6 +82,31 @@ output: {
 
 <br><br>
 
+## Babel Loader
+
+- 구버전 브라우저에서도 최신 자바스크립트 코드로 이루어진 앱을 이용할 수 있게 ES5 이하의 코드로 프랜스파일링 하도록 하는 기능이 바벨
+
+- 웹팩으로 파일을 번들링할 때도 바벨을 사용할 수 있게 해주는 것이 babel-loader
+
+- 설치
+
+  ```terminal
+  npm install -D babel-loader @babel/core @babel/preset-env
+  ```
+- 사용법
+
+  ```js
+  {
+    test: /\.js$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      option: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  }
+  ```
 
 <br><br>
 <br><br>

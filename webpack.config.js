@@ -9,7 +9,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
-    clean: true
+    clean: true,
+    // 에셋 파일이름 원본 이름으로 
+    assetModuleFilename: '[name][ext]'
   },
   devtool: 'source-map',
   module: {
@@ -31,6 +33,10 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        type: 'asset/resource'
       }
     ]
   }, 
