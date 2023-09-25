@@ -61,7 +61,28 @@ import 기능 작성 후 build 하면 main.js에 업데이트
 - stylus-loader: Stylus 파일을 로드하고 컴파일
 
 <br><br>
+
+## 파일 이름에 Hash 값 주는 법
+
+```js
+output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name][contenthash].js',
+  },
+```
+
+- 이전 해시 파일을 자동으로 지워주려면
+```js
+output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name][contenthash].js',
+    clean: true
+  },
+```
+
 <br><br>
+
+
 <br><br>
 <br><br>
 <br><br>
