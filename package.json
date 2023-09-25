@@ -25,6 +25,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "nanoid": "^5.0.1"
+    "nanoid": "^5.0.1",
+    "webpack-bundle-analyzer": "^4.9.1"
   }
 }
